@@ -13,6 +13,9 @@ import { IconArrow, IconExternal } from "@/components/icons";
  * Рейтинг здесь не выносится (DESIGN.md §4): первый экран держат факты,
  * которые заведение подтверждает само.
  *
+ * Кегль h1 привязан к ширине колонки: самое длинное слово («Mediterranean»,
+ * «mediterránea») не должно залезать на снимок ни на 1024, ни на 1440, ни на 320.
+ *
  * Анимации появления нет: заголовок и главный снимок — это LCP.
  * data-hero нужен только съёмке скриншотов (см. память проекта про 100svh).
  */
@@ -28,7 +31,7 @@ export function Hero({ locale }: { locale: Locale }) {
           <p className="ruled ruled-start text-xs font-semibold uppercase tracking-[0.28em] text-graphite">{dict.hero.eyebrow}</p>
 
           <h1
-            className="mt-7 font-display text-[3.1rem] font-normal leading-[0.98] tracking-[-0.015em] text-ink sm:text-7xl lg:text-[4.6rem] xl:text-[5.2rem]"
+            className="mt-7 font-display text-[clamp(2.4rem,13vw,3.1rem)] font-normal leading-[0.98] tracking-[-0.015em] text-ink sm:text-7xl lg:text-[min(5.4vw,4.5rem)]"
             style={{ textWrap: "balance" }}
           >
             {dict.hero.title}
