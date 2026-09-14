@@ -1,0 +1,43 @@
+--- page 0
+HEINEKEN
+3,50€
+Tamaño 33cl. – Graduación 5%
+C A R T A C E R V E Z A S
+CAÑA HEINEKEN
+3,00€
+Tamaño 200ml – Graduación 5% 
+DOBLE HEINEKEN
+4,00€
+Tamaño 400ml – Graduación 5% 
+PINTA HEINEKEN
+5,00€
+Graduación 5% 
+CAÑA RADLER
+3,00€
+Tamaño 200ml. – Graduación 2,2%
+DOBLE RADLER
+4,00€
+Tamaño 400ml. – Graduación 2,2%
+PINTA RADLER
+5,00€
+Tamaño 500ml. – Graduación 2,2%
+AMSTEL ORO
+4,00€
+Tostada. Tamaño 33cl. – Graduación 6,2%
+AMSTEL ORO 0.0 (Sin Alcohol)
+3,80€
+Tostada. Tamaño 33cl. Graduación 0%
+ESTRELLA GALICIA
+4,00€
+Tamaño 33cl. – Graduación 5,5%
+CRUZCAMPO (Sin gluten) 
+3,50€
+Tamaño 33cl. – Graduación 5,6%
+ÀGUILA SIN FILTRAR
+4,00€
+Tamaño 33cl. – Graduación 5,5%
+EXNER SIDRA
+5,50€
+Tamaño 33cl. Graduación 5,5%
+
+--- page 1

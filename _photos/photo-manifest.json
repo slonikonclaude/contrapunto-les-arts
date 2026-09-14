@@ -1,0 +1,118 @@
+{
+  "arroz-negro": {
+    "width": 2000,
+    "height": 900
+  },
+  "arroz-pescado": {
+    "width": 2000,
+    "height": 2673
+  },
+  "carne-madurada": {
+    "width": 2000,
+    "height": 1500
+  },
+  "comensales": {
+    "width": 2001,
+    "height": 3000
+  },
+  "coulant": {
+    "width": 2000,
+    "height": 1500
+  },
+  "gofre-perlas": {
+    "width": 3000,
+    "height": 2000
+  },
+  "letras-estanque": {
+    "width": 2000,
+    "height": 1500
+  },
+  "letras-terraza": {
+    "width": 3000,
+    "height": 1764
+  },
+  "mesa-flores": {
+    "width": 1600,
+    "height": 1065
+  },
+  "mesa-larga": {
+    "width": 3000,
+    "height": 1986
+  },
+  "ostras": {
+    "width": 1080,
+    "height": 1006
+  },
+  "palau-azul": {
+    "width": 1687,
+    "height": 3000
+  },
+  "palau-noche": {
+    "width": 2000,
+    "height": 2667
+  },
+  "pescado-coliflor": {
+    "width": 2000,
+    "height": 2667
+  },
+  "pulpo-roca": {
+    "width": 2000,
+    "height": 2667
+  },
+  "rincon-sofa": {
+    "width": 3000,
+    "height": 2014
+  },
+  "sala-calatrava": {
+    "width": 3000,
+    "height": 2000
+  },
+  "sala-pasillo": {
+    "width": 2068,
+    "height": 3000
+  },
+  "sala-vertical": {
+    "width": 2304,
+    "height": 3000
+  },
+  "tabla-quesos": {
+    "width": 3000,
+    "height": 2000
+  },
+  "terraza-barra": {
+    "width": 2000,
+    "height": 1506
+  },
+  "terraza-copa": {
+    "width": 2000,
+    "height": 2667
+  },
+  "terraza-estanque": {
+    "width": 1920,
+    "height": 1080
+  },
+  "torrija": {
+    "width": 2000,
+    "height": 1506
+  },
+  "vino-vistas": {
+    "width": 2000,
+    "height": 1500
+  },
+  "logo-palau": {
+    "width": 3262,
+    "height": 1417
+  },
+  "logo": {
+    "width": 3000,
+    "height": 561
+  },
+  "palau-linea": {
+    "width": 2507,
+    "height": 756
+  },
+  "visit-valencia": {
+    "width": 828,
+    "height": 406
+  }
+}

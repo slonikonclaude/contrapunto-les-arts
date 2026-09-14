@@ -1,0 +1,133 @@
+@import "tailwindcss";
+
+/**
+ * Токены из DESIGN.md §5. Хардкода цветов в компонентах нет — только эти
+ * переменные. Контраст каждой пары посчитан, значения и запреты — там же.
+ */
+@theme {
+  /* Бумага печатной карты: основной фон, через секцию — лён, панели — card. */
+  --color-paper: #f2efe9;
+  --color-linen: #e7e2d8;
+  --color-card: #faf8f4;
+
+  /* Чёрный логотипа и текст. graphite — описания и подписи. */
+  --color-ink: #141413;
+  --color-graphite: #57534b;
+
+  /* Оранжевый заголовков их сайта. На светлом — только naranja-ink (5.0+). */
+  --color-naranja: #ff5715;
+  --color-naranja-ink: #a63b0b;
+
+  /* Чёрные полосы: меню обеда, призыв, подвал. */
+  --color-night: #161514;
+  --color-night-soft: #232220;
+  --color-mist: #bbb5aa;
+
+  /* rule — только декор; границы контролов — rule-strong (3:1 и выше). */
+  --color-rule: #d3ccc0;
+  --color-rule-strong: #7d776d;
+
+  --font-display: var(--font-playfair), ui-serif, Georgia, serif;
+  --font-sans: var(--font-karla), ui-sans-serif, system-ui, sans-serif;
+}
+
+/*
+ * Тёмной темы нет намеренно (DESIGN.md §3): бренд, карта и снимки светлые.
+ * Схема объявлена явно, чтобы браузер красил формы и скроллбары в тон.
+ */
+:root {
+  color-scheme: light;
+  scroll-behavior: smooth;
+  /* Якорные ссылки не должны загонять заголовок под липкую шапку. */
+  scroll-padding-top: 5.5rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  background-color: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background-color: var(--color-ink);
+  color: var(--color-paper);
+}
+
+/* Фокус видно везде: чёрное кольцо на бумаге, бумажное — на чёрных полосах. */
+:focus-visible {
+  outline: 2px solid var(--color-ink);
+  outline-offset: 3px;
+}
+.on-night :focus-visible {
+  outline-color: var(--color-paper);
+}
+
+/* Цены и числа в колонках — моноширинные цифры (DESIGN.md §6). */
+.tabular {
+  font-variant-numeric: tabular-nums;
+}
+
+/*
+ * Надзаголовок как в печатной карте: капитель с разрядкой между двумя
+ * тонкими линейками. Линейки — псевдоэлементы, скринридер их не читает.
+ */
+.ruled {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+}
+.ruled::before,
+.ruled::after {
+  content: "";
+  height: 1px;
+  flex: 1 1 0;
+  background-color: currentColor;
+  opacity: 0.35;
+}
+.ruled-start::before {
+  display: none;
+}
+
+/* Горизонтальный рельс вкладок карты: без полосы прокрутки, со снапом. */
+.rail {
+  scrollbar-width: none;
+  scroll-snap-type: x proximity;
+}
+.rail::-webkit-scrollbar {
+  display: none;
+}
+.rail > * {
+  scroll-snap-align: start;
+}
+
+/* Затемнение снизу у снимков с подписью поверх — подпись читается на любом кадре. */
+.photo-scrim {
+  background: linear-gradient(to top, color-mix(in oklab, var(--color-night) 78%, transparent) 0%, color-mix(in oklab, var(--color-night) 30%, transparent) 55%, transparent 100%);
+}
+
+/* Точечная линия между названием и ценой, как в карте с отточием. */
+.leader {
+  flex: 1 1 auto;
+  min-width: 1.5rem;
+  border-bottom: 1px dotted var(--color-rule-strong);
+  transform: translateY(-0.3em);
+}
+
+/* Маркер <details> винной карты — свой, стрелка поворачивается. */
+details > summary {
+  list-style: none;
+}
+details > summary::-webkit-details-marker {
+  display: none;
+}
+details[open] > summary [data-chevron] {
+  transform: rotate(180deg);
+}
